@@ -86,7 +86,7 @@
 
             <TextView
                 android:background="@color/green50"
-                android:text="50"
+                android:text="0"
                 android:paddingLeft="80dp"
                 android:textSize="12sp"
                 android:layout_width="match_parent"
@@ -99,7 +99,7 @@
 
             <TextView
                 android:background="@color/green50"
-                android:text="187"
+                android:text="001"
                 android:paddingLeft="80dp"
                 android:textSize="12sp"
                 android:layout_width="fill_parent"
@@ -149,7 +149,8 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:id="@+id/powerSwitch"
-            android:layout_weight="0.57" />
+            android:layout_weight="0.57"
+            android:onClick="onClickSwitched"/>
 
     </LinearLayout>
 

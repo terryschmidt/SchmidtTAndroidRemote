@@ -6,6 +6,7 @@ import android.view.*;
 import android.view.View.*;
 import android.os.Bundle;
 import android.widget.*;
+import android.util.*;
 import android.view.Menu;
 import android.view.MenuItem;
 
@@ -58,23 +59,52 @@ public class remoteMainActivity extends Activity {
         minusButton = (Button) findViewById(R.id.minusButton);
         powerSwitch = (Switch) findViewById(R.id.powerSwitch);
         seekBar = (SeekBar) findViewById(R.id.seekBar);
+        powerSwitch.setChecked(true);
+
+        powerSwitch.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if (isChecked == true) {
+                    zeroButton.setClickable(true); oneButton.setClickable(true); twoButton.setClickable(true);
+                    threeButton.setClickable(true); fourButton.setClickable(true); fiveButton.setClickable(true);
+                    sixButton.setClickable(true); sevenButton.setClickable(true); eightButton.setClickable(true);
+                    nineButton.setClickable(true); ABCButton.setClickable(true); CBSButton.setClickable(true);
+                    NBCButton.setClickable(true); plusButton.setClickable(true); minusButton.setClickable(true);
+                    seekBar.setEnabled(true); tvPowerText.setText("On");
+                } else {
+                    zeroButton.setClickable(false); oneButton.setClickable(false); twoButton.setClickable(false);
+                    threeButton.setClickable(false); fourButton.setClickable(false); fiveButton.setClickable(false);
+                    sixButton.setClickable(false); sevenButton.setClickable(false); eightButton.setClickable(false);
+                    nineButton.setClickable(false); ABCButton.setClickable(false); CBSButton.setClickable(false);
+                    NBCButton.setClickable(false); plusButton.setClickable(false); minusButton.setClickable(false);
+                    seekBar.setEnabled(false); tvPowerText.setText("Off");
+                }
+            }
+        });
+
+        seekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
+            @Override
+            public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
+                // TODO Auto-generated method stub
+                speakerVolumeText.setText(String.valueOf(progress));
+            }
+
+            @Override
+            public void onStartTrackingTouch(SeekBar seekBar) {
+                // TODO Auto-generated method stub
+            }
+
+            @Override
+            public void onStopTrackingTouch(SeekBar seekBar) {
+                // TODO Auto-generated method stub
+            }
+        });
 
         int[] idList = {
-                R.id.ABCButton,
-                R.id.CBSButton,
-                R.id.NBCButton,
-                R.id.plusButton,
-                R.id.minusButton,
-                R.id.zeroButton,
-                R.id.oneButton,
-                R.id.twoButton,
-                R.id.threeButton,
-                R.id.fourButton,
-                R.id.fiveButton,
-                R.id.sixButton,
-                R.id.sevenButton,
-                R.id.eightButton,
-                R.id.nineButton
+                R.id.ABCButton, R.id.CBSButton, R.id.NBCButton,
+                R.id.plusButton, R.id.minusButton, R.id.zeroButton,
+                R.id.oneButton, R.id.twoButton, R.id.threeButton,
+                R.id.fourButton, R.id.fiveButton, R.id.sixButton,
+                R.id.sevenButton, R.id.eightButton, R.id.nineButton
         };
 
         for (int id : idList) {
@@ -140,6 +170,8 @@ public class remoteMainActivity extends Activity {
             if (Integer.parseInt(channelUserIsEntering) <= 999 && Integer.parseInt(channelUserIsEntering) >= 1) {
                 currentChanText.setText(channelUserIsEntering);
                 currentChannelNum = Integer.parseInt(currentChanText.getText().toString());
+                channelUserIsEntering = "";
+            } else {
                 channelUserIsEntering = "";
             }
         }
