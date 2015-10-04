@@ -3,7 +3,8 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:weightSum="1">
+    android:weightSum="1"
+    >
 
     <LinearLayout
         android:orientation="horizontal"
@@ -125,6 +126,280 @@
         android:textSize="28sp"
         android:layout_gravity="center_horizontal"
         android:layout_weight="0.04"
-        android:textColor="@android:color/black" />
+        android:textColor="@android:color/black"/>
 
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="25dp"
+        android:weightSum="1">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="Power"
+            android:paddingLeft="10dp"
+            android:id="@+id/powerLabel"
+            android:gravity="center_vertical"
+            android:textSize="10sp"
+            android:layout_gravity="left"
+            android:textColor="@android:color/black"/>
+
+        <Switch
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/powerSwitch"
+            android:layout_weight="0.57" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="25dp"
+        android:weightSum="1">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="Volume"
+            android:paddingLeft="10dp"
+            android:paddingRight="25dp"
+            android:id="@+id/volumeLabel"
+            android:gravity="center_vertical"
+            android:textSize="10sp"
+            android:layout_gravity="left"
+            android:textColor="@android:color/black"/>
+
+        <SeekBar
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="right"
+            android:paddingLeft="20sp"
+            android:id="@+id/seekBar"
+            android:layout_weight="0.95" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:weightSum="1"
+    >
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Channel"
+        android:gravity="top"
+        android:paddingTop="10dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:id="@+id/channelText"
+        android:textColor="@android:color/black"
+        android:textSize="10sp" />
+
+    <Button
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:layout_gravity="right"
+        android:id="@+id/zeroButton" />
+
+    <Button
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:text="1"
+        android:layout_weight="0.33"
+        android:layout_gravity="right"
+        android:id="@+id/oneButton" />
+
+    <Button
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:text="2"
+        android:layout_weight="0.24"
+        android:id="@+id/twoButton" />
+
+</LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="1"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Channel"
+            android:gravity="top"
+            android:paddingTop="10dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:id="@+id/channelText2"
+            android:textColor="#f0f0f0"
+            android:textSize="10sp" />
+
+        <Button
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="3"
+            android:layout_gravity="right"
+            android:id="@+id/threeButton" />
+
+        <Button
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="4"
+            android:layout_weight="0.33"
+            android:layout_gravity="right"
+            android:id="@+id/fourButton" />
+
+        <Button
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:text="5"
+            android:layout_weight="0.24"
+            android:id="@+id/fiveButton" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="1"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Channel"
+            android:gravity="top"
+            android:paddingTop="10dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:id="@+id/channelText3"
+            android:textColor="#f0f0f0"
+            android:textSize="10sp" />
+
+        <Button
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="6"
+            android:layout_gravity="right"
+            android:id="@+id/sixButton" />
+
+        <Button
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="7"
+            android:layout_weight="0.33"
+            android:layout_gravity="right"
+            android:id="@+id/sevenButton" />
+
+        <Button
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:text="8"
+            android:layout_weight="0.24"
+            android:id="@+id/eightButton" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="1"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Channel"
+            android:gravity="top"
+            android:paddingTop="10dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:id="@+id/channelText4"
+            android:textColor="#f0f0f0"
+            android:textSize="10sp" />
+
+        <Button
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="9"
+            android:layout_gravity="right"
+            android:id="@+id/nineButton" />
+
+        <Button
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="CH+"
+            android:layout_weight="0.33"
+            android:layout_gravity="right"
+            android:id="@+id/plusButton" />
+
+        <Button
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:text="CH-"
+            android:layout_weight="0.24"
+            android:id="@+id/minusButton" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="1"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Favorite \nChannel"
+            android:gravity="top"
+            android:paddingTop="10dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="6dp"
+            android:id="@+id/favChan"
+            android:textColor="@android:color/black"
+            android:textSize="10sp" />
+
+        <Button
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="ABC"
+            android:layout_gravity="right"
+            android:id="@+id/ABCButton" />
+
+        <Button
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="NBC"
+            android:layout_weight="0.33"
+            android:layout_gravity="right"
+            android:id="@+id/NBCButton" />
+
+        <Button
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:text="CBS"
+            android:layout_weight="0.24"
+            android:id="@+id/CBSButton" />
+
+    </LinearLayout>
 </LinearLayout>
