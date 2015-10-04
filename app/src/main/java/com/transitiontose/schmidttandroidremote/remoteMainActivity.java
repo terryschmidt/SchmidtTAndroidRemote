@@ -119,7 +119,7 @@ public class remoteMainActivity extends Activity {
                 case R.id.plusButton: plusPressed(); break;
                 case R.id.minusButton: minusPressed(); break;
                 case R.id.ABCButton: currentChanText.setText("007"); currentChannelNum = 7; break;
-                case R.id.CBSButton: currentChanText.setText("002"); currentChannelNum = 2;break;
+                case R.id.CBSButton: currentChanText.setText("002"); currentChannelNum = 2; break;
                 case R.id.NBCButton: currentChanText.setText("005"); currentChannelNum = 5; break;
                 default: numPressed(v); break;  // default case is when user pressed a numeric button
             }
