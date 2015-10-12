@@ -1,14 +1,10 @@
 package com.transitiontose.schmidttandroidremote;
 
 import android.app.Activity;
-import android.os.*;
 import android.view.*;
 import android.view.View.*;
 import android.os.Bundle;
 import android.widget.*;
-import android.util.*;
-import android.view.Menu;
-import android.view.MenuItem;
 
 public class remoteMainActivity extends Activity {
 
